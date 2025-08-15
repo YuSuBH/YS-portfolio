@@ -23,10 +23,16 @@ function App() {
       >
         <Navbar menuOpen={menuOpen} setmenuOpen={setmenuOpen} />
         <MobileMenu menuOpen={menuOpen} setmenuOpen={setmenuOpen} />
-        <Home />
-        <About />
-        <Projects />
-        <Contact />
+        <div
+          className={`transition-opacity duration-300 ${
+            menuOpen ? "opacity-30" : "opacity-100"
+          }`}
+        >
+          <Home />
+          <About />
+          <Projects />
+          <Contact />
+        </div>
       </div>
     </>
   );

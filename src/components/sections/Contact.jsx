@@ -78,7 +78,7 @@ export const Contact = () => {
 
             <button
               type="submit"
-              className="w-full bg-blue-500 text-white py-3 px-6 rounded-xl font-medium transition relative overflow-hidden hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]"
+              className="w-full bg-blue-500 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]"
             >
               Send message
             </button>
