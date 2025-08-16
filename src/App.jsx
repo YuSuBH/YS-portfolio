@@ -25,7 +25,7 @@ function App() {
         <MobileMenu menuOpen={menuOpen} setmenuOpen={setmenuOpen} />
         <div
           className={`transition-opacity duration-300 ${
-            menuOpen ? "opacity-30" : "opacity-100"
+            menuOpen ? "opacity-20" : "opacity-100"
           }`}
         >
           <Home />
