@@ -10,6 +10,23 @@ body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   background-color: black;
   color: white;
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Prevent layout shift by ensuring consistent viewport */
+html {
+  scrollbar-gutter: stable both-edges;
+}
+
+body {
+  width: 100vw;
+  max-width: 100%;
 }
 
 @layer utilities {
@@ -168,4 +185,17 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Additional layout fixes */
+#root {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Ensure all containers take full width */
+.min-h-screen {
+  width: 100%;
+  max-width: 100vw;
 }
