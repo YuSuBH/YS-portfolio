@@ -1,13 +1,22 @@
 import { useEffect } from "react";
 import { ModeToggle } from "./mode-toggle";
+import useScrollDirection from "../hooks/useScrollDirection";
 
 export const Navbar = ({ menuOpen, setmenuOpen }) => {
+  const { isVisible } = useScrollDirection();
+
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "auto";
   }, [menuOpen]);
 
+  // Determine navbar visibility classes
+  // Mobile menu state overrides scroll behavior - navbar stays visible when menu is open
+  const navbarClasses = `navbar-scroll-responsive w-full z-40 bg-[rgba(10, 10, 10, 0.8)] backdrop-blur-lg border-b border-white/10 shadow-lg ${
+    menuOpen || isVisible ? "navbar-visible" : "navbar-hidden"
+  }`;
+
   return (
-    <nav className="w-full z-40 bg-[rgba(10, 10, 10, 0.8)] backdrop-blur-lg border-b border-white/10 shadow-lg">
+    <nav className={navbarClasses}>
       <div className="max-w-5xl mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <a
@@ -23,7 +32,7 @@ export const Navbar = ({ menuOpen, setmenuOpen }) => {
             <button
               className="text-2xl z-40"
               onClick={() => setmenuOpen((prev) => !prev)}
-              aria-label="Toggle menu" 
+              aria-label="Toggle menu"
             >
               &#9776;
             </button>
