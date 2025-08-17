@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { ModeToggle } from "./mode-toggle";
 
 export const Navbar = ({ menuOpen, setmenuOpen }) => {
   useEffect(() => {
@@ -9,45 +10,55 @@ export const Navbar = ({ menuOpen, setmenuOpen }) => {
     <nav className="fixed top-0 w-full z-40 bg-[rgba(10, 10, 10, 0.8)] backdrop-blur-lg border-b border-white/10 shadow-lg">
       <div className="max-w-5xl mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
-          <a href="#home" className="font-mono text-xl font-bold text-white">
-            yusuf<span className="text-blue-500">.suhail</span>
+          <a
+            href="#home"
+            className="font-mono text-xl font-bold text-foreground"
+          >
+            yusuf<span className="text-primary">.suhail</span>
           </a>
 
-          <div
-            className="w-7 h-5 relative cursor-pointer z-40 md:hidden"
-            onClick={() => setmenuOpen((prev) => !prev)}
-          >
-            &#9776;
+          <div className="flex items-center gap-x-4 md:hidden">
+            <ModeToggle />
+
+            <button
+              className="text-2xl z-40"
+              onClick={() => setmenuOpen((prev) => !prev)}
+              aria-label="Toggle menu" 
+            >
+              &#9776;
+            </button>
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
             <a
               href="#home"
-              className="text-gray-500 hover:text-white transition-colors"
+              className="text-muted-foreground hover:text-foreground transition-colors"
             >
               Home
             </a>
 
             <a
               href="#about"
-              className="text-gray-500 hover:text-white transition-colors"
+              className="text-muted-foreground hover:text-foreground transition-colors"
             >
               About
             </a>
 
             <a
               href="#projects"
-              className="text-gray-500 hover:text-white transition-colors"
+              className="text-muted-foreground hover:text-foreground transition-colors"
             >
               Projects
             </a>
 
             <a
               href="#contact"
-              className="text-gray-500 hover:text-white transition-colors"
+              className="text-muted-foreground hover:text-foreground transition-colors"
             >
               Contact
             </a>
+
+            <ModeToggle />
           </div>
         </div>
       </div>

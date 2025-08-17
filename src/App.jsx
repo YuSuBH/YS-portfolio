@@ -8,6 +8,7 @@ import { Home } from "./components/sections/Home";
 import { About } from "./components/sections/About";
 import { Projects } from "./components/sections/Projects";
 import { Contact } from "./components/sections/Contact";
+import { ThemeProvider } from "./components/theme-provider";
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -19,20 +20,22 @@ function App() {
       <div
         className={`min-h-screen transition-opacity duration-700 ${
           isLoaded ? "opacity-100" : "opacity-0"
-        } bg-black text-gray-100`}
+        } bg-background text-foreground`}
       >
-        <Navbar menuOpen={menuOpen} setmenuOpen={setmenuOpen} />
-        <MobileMenu menuOpen={menuOpen} setmenuOpen={setmenuOpen} />
-        <div
-          className={`transition-opacity duration-300 ${
-            menuOpen ? "opacity-20" : "opacity-100"
-          }`}
-        >
-          <Home />
-          <About />
-          <Projects />
-          <Contact />
-        </div>
+        <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+          <MobileMenu menuOpen={menuOpen} setmenuOpen={setmenuOpen} />
+          <div
+            className={`transition-opacity duration-300 ${
+              menuOpen ? "opacity-20" : "opacity-100"
+            }`}
+          >
+            <Navbar menuOpen={menuOpen} setmenuOpen={setmenuOpen} />
+            <Home />
+            <About />
+            <Projects />
+            <Contact />
+          </div>
+        </ThemeProvider>
       </div>
     </>
   );

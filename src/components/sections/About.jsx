@@ -15,8 +15,8 @@ export const About = () => {
             About me
           </h2>
 
-          <div className="rounded-xl p-8 border-white/10 border hover:border-blue-500/30 hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all duration-300">
-            <p className="text-gray-300 mb-6">
+          <div className="rounded-xl p-8 border-border border hover:border-primary/30 hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all duration-300">
+            <p className="text-muted-foreground mb-6">
               passionate developer passionate develope passionate develope
               passionate develope passionate develope passionate develope
             </p>
@@ -28,7 +28,7 @@ export const About = () => {
                   {frontendSkills.map((tech, key) => (
                     <span
                       key={key}
-                      className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_0_10px_rgba(59,130,246,0.4)] transition"
+                      className="bg-primary/10 text-primary py-1 px-3 rounded-full text-sm hover:bg-primary/20 hover:shadow-[0_0_10px_rgba(59,130,246,0.4)] transition"
                     >
                       {tech}
                     </span>
@@ -42,7 +42,7 @@ export const About = () => {
                   {backendSkills.map((tech, key) => (
                     <span
                       key={key}
-                      className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_0_10px_rgba(59,130,246,0.4)] transition"
+                      className="bg-primary/10 text-primary py-1 px-3 rounded-full text-sm hover:bg-primary/20 hover:shadow-[0_0_10px_rgba(59,130,246,0.4)] transition"
                     >
                       {tech}
                     </span>
@@ -53,9 +53,9 @@ export const About = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-            <div className="p-6 rounded-xl border-white/10 border hover:border-blue-500/30 hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all duration-300">
+            <div className="p-6 rounded-xl border-border border hover:border-primary/30 hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all duration-300">
               <h3 className="text-xl font-bold mb-4">Education</h3>
-              <ul className="list-disc list-inside text-gray-300 space-y-2">
+              <ul className="list-disc list-inside text-muted-foreground space-y-2">
                 <li>
                   <strong> BE in Computer Science </strong> - IIT Bombay
                   (2023-2027)
@@ -67,23 +67,23 @@ export const About = () => {
               </ul>
             </div>
 
-            <div className="p-6 rounded-xl border-white/10 border hover:border-blue-500/30 hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all duration-300">
+            <div className="p-6 rounded-xl border-border border hover:border-primary/30 hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all duration-300">
               <h3 className="text-xl font-bold mb-4">Experiance</h3>
-              <div className="space-y-4 text-gray-300">
+              <div className="space-y-4 text-muted-foreground">
                 <div>
-                  <h4 className="font-bold text-white">
+                  <h4 className="font-bold text-foreground">
                     Software Engineer at Google
                   </h4>
-                  <p className="text-gray-400">
+                  <p className="text-muted-foreground">
                     Product manager and supervisor
                   </p>
                 </div>
 
                 <div>
-                  <h4 className="font-bold text-white">
+                  <h4 className="font-bold text-foreground">
                     Software Engineer intern at openai
                   </h4>
-                  <p className="text-gray-400">
+                  <p className="text-muted-foreground">
                     LLM trainer with wikipeda data and reddit
                   </p>
                 </div>

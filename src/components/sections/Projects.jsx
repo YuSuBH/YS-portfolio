@@ -13,9 +13,9 @@ export const Projects = () => {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="p-6 rounded-xl border border-white/10 hover:scale-102 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition-all duration-300 ease-out">
+            <div className="p-6 rounded-xl border border-border hover:scale-102 hover:border-primary/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition-all duration-300 ease-out">
               <h3 className="text-xl font-bold mb-2">Social media</h3>
-              <p className="text-gray-400 mb-4">
+              <p className="text-muted-foreground mb-4">
                 Social media project Social media projec Social media projec
                 Social media projec
               </p>
@@ -24,7 +24,7 @@ export const Projects = () => {
                 {["react", "nextjs", "nodejs", "sql"].map((tech, key) => (
                   <span
                     key={key}
-                    className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_0_10px_rgba(59,130,246,0.4)] transition"
+                    className="bg-primary/10 text-primary py-1 px-3 rounded-full text-sm hover:bg-primary/20 hover:shadow-[0_0_10px_rgba(59,130,246,0.4)] transition"
                   >
                     {tech}
                   </span>
@@ -34,16 +34,16 @@ export const Projects = () => {
               <div className="flex justify-between items-center">
                 <a
                   href="#"
-                  className="text-blue-400 hover:text-blue-300 transition-colors my-4"
+                  className="text-primary hover:text-primary/80 transition-colors my-4"
                 >
                   View project ➡
                 </a>
               </div>
             </div>
 
-            <div className="p-6 rounded-xl border border-white/10 hover:scale-102 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition-all duration-300 ease-out">
+            <div className="p-6 rounded-xl border border-border hover:scale-102 hover:border-primary/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition-all duration-300 ease-out">
               <h3 className="text-xl font-bold mb-2">Portfolio</h3>
-              <p className="text-gray-400 mb-4">
+              <p className="text-muted-foreground mb-4">
                 Social media project Social media projec Social media projec
                 Social media projec
               </p>
@@ -52,7 +52,7 @@ export const Projects = () => {
                 {["react", "nextjs", "nodejs", "sql"].map((tech, key) => (
                   <span
                     key={key}
-                    className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_0_10px_rgba(59,130,246,0.4)] transition"
+                    className="bg-primary/10 text-primary py-1 px-3 rounded-full text-sm hover:bg-primary/20 hover:shadow-[0_0_10px_rgba(59,130,246,0.4)] transition"
                   >
                     {tech}
                   </span>
@@ -62,7 +62,7 @@ export const Projects = () => {
               <div className="flex justify-between items-center">
                 <a
                   href="#"
-                  className="text-blue-400 hover:text-blue-400 transition-colors my-4"
+                  className="text-primary hover:text-primary/80 transition-colors my-4"
                 >
                   View project ➡
                 </a>

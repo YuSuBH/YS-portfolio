@@ -9,7 +9,7 @@ export const MobileMenu = ({ menuOpen, setmenuOpen }) => {
     >
       <button
         onClick={() => setmenuOpen(false)}
-        className="absolute top-6 right-6 text-white text-3xl focus:outline-none cursor-pointer"
+        className="absolute top-6 right-6 text-foreground text-3xl focus:outline-none cursor-pointer"
         aria-label="Close menu"
       >
         &times;
@@ -18,7 +18,7 @@ export const MobileMenu = ({ menuOpen, setmenuOpen }) => {
       <a
         href="#home"
         onClick={() => setmenuOpen(false)}
-        className={`text-2xl font-semibold text-white my-4 transform transition-all duration-300 hover:text-blue-500 ${
+        className={`text-2xl font-semibold text-foreground my-4 transform transition-all duration-300 hover:text-primary ${
           menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
         }`}
       >
@@ -28,7 +28,7 @@ export const MobileMenu = ({ menuOpen, setmenuOpen }) => {
       <a
         href="#about"
         onClick={() => setmenuOpen(false)}
-        className={`text-2xl font-semibold text-white my-4 transform transition-all duration-300 delay-75 hover:text-blue-500 ${
+        className={`text-2xl font-semibold text-foreground my-4 transform transition-all duration-300 delay-75 hover:text-primary ${
           menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
         }`}
       >
@@ -38,7 +38,7 @@ export const MobileMenu = ({ menuOpen, setmenuOpen }) => {
       <a
         href="#projects"
         onClick={() => setmenuOpen(false)}
-        className={`text-2xl font-semibold text-white my-4 transform transition-all duration-300 delay-150 hover:text-blue-500 ${
+        className={`text-2xl font-semibold text-foreground my-4 transform transition-all duration-300 delay-150 hover:text-primary ${
           menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
         }`}
       >
@@ -48,7 +48,7 @@ export const MobileMenu = ({ menuOpen, setmenuOpen }) => {
       <a
         href="#contact"
         onClick={() => setmenuOpen(false)}
-        className={`text-2xl font-semibold text-white my-4 transform transition-all duration-300 delay-225 hover:text-blue-500 ${
+        className={`text-2xl font-semibold text-foreground my-4 transform transition-all duration-300 delay-225 hover:text-primary ${
           menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
         }`}
       >
