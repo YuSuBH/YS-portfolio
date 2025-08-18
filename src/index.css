@@ -19,9 +19,8 @@ body {
   box-sizing: border-box;
 }
 
-/* Prevent layout shift by ensuring consistent viewport */
 html {
-  scrollbar-gutter: stable both-edges;
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -187,29 +186,24 @@ body {
   }
 }
 
-/* Additional layout fixes */
 #root {
   width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
 }
 
-/* Ensure all containers take full width */
 .min-h-screen {
   width: 100%;
   max-width: 100vw;
 }
 
-/* Navbar scroll transition classes with mobile compatibility */
 .navbar-scroll-responsive {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 40;
-  /* Improve rendering performance on mobile devices */
   will-change: transform;
-  /* Prevent iOS bounce scrolling from affecting navbar */
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
@@ -217,7 +211,6 @@ body {
 .navbar-visible {
   transform: translateY(0);
   transition: transform 0.3s ease-in-out;
-  /* Ensure smooth transitions on iOS */
   -webkit-transform: translateY(0);
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
 }
@@ -230,27 +223,21 @@ body {
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
 }
 
-/* Mobile-specific optimizations */
 @media (max-width: 768px) {
   .navbar-scroll-responsive {
-    /* Optimize for mobile performance */
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    /* Prevent text selection during scroll transitions */
     -webkit-user-select: none;
     user-select: none;
   }
 }
 
-/* iOS-specific fixes for momentum scrolling */
 @supports (-webkit-overflow-scrolling: touch) {
   body {
-    /* Enable momentum scrolling on iOS */
     -webkit-overflow-scrolling: touch;
   }
 
   .navbar-scroll-responsive {
-    /* Improve performance during iOS momentum scrolling */
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }

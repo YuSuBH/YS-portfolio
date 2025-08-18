@@ -9,8 +9,6 @@ export const Navbar = ({ menuOpen, setmenuOpen }) => {
     document.body.style.overflow = menuOpen ? "hidden" : "auto";
   }, [menuOpen]);
 
-  // Determine navbar visibility classes
-  // Mobile menu state overrides scroll behavior - navbar stays visible when menu is open
   const navbarClasses = `navbar-scroll-responsive w-full z-40 bg-[rgba(10, 10, 10, 0.8)] backdrop-blur-lg border-b border-white/10 shadow-lg ${
     menuOpen || isVisible ? "navbar-visible" : "navbar-hidden"
   }`;
